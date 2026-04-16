@@ -7,6 +7,7 @@ import dev.herencia.cuenta.*;
 import dev.herencia.producto.*;
 import dev.herencia.transporte.*;
 import dev.herencia.empleado.*;
+import dev.herencia.animal.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -70,6 +71,17 @@ public class Main {
         System.out.println("\n---- Gerente ----");
         Gerente ger = new Gerente("Maria", 4000, 2500);
         ger.mostrarInfo();
+        
+        
+        System.out.println("\n===== EJERCICIO 6 =====");
+        System.out.println("---- Animal ----");
+        Animal animal = new Animal();
+        animal.hacerSonido();
+        
+        System.out.println("\n---- Perro ----");
+        Perro perro = new Perro();
+        perro.hacerSonido();
+
 
             
     }
