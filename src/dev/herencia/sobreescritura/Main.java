@@ -10,6 +10,7 @@ import dev.herencia.empleado.*;
 import dev.herencia.animal.*;
 import dev.herencia.vehiculo.*;
 import dev.herencia.figura.*;
+import dev.herencia.libro.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -92,7 +93,7 @@ public class Main {
         moto.mostrarInfo();
 
         
-        System.out.println("\n===== EJERCICIO 9 =====");
+        System.out.println("\n===== EJERCICIO 8 =====");
         System.out.println("---- Figura ----");
         Figura fig = new Figura();
         System.out.print("Area: " + fig.calcularArea()+ "\n");
@@ -105,7 +106,15 @@ public class Main {
         Circulo cir = new Circulo(25);
         System.out.println("Area: " + cir.calcularArea());
 
-
+        
+        System.out.println("\n===== EJERCICIO 9 =====");
+        System.out.println("---- Libro ----");
+        Libro libro = new Libro("El Quijote", "Cervantes");
+        libro.mostrarInfo();
+        
+        System.out.println("\n---- Libro Digital ----");
+        LibroDigital ebook = new LibroDigital("Clean Code", "Robert C. Martin", 5.2);
+        ebook.mostrarInfo();
             
     }
 }
