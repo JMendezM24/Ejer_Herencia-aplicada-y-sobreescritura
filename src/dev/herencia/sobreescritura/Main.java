@@ -11,6 +11,7 @@ import dev.herencia.animal.*;
 import dev.herencia.vehiculo.*;
 import dev.herencia.figura.*;
 import dev.herencia.libro.*;
+import dev.herencia.facturacion.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -115,6 +116,18 @@ public class Main {
         System.out.println("\n---- Libro Digital ----");
         LibroDigital ebook = new LibroDigital("Clean Code", "Robert C. Martin", 5.2);
         ebook.mostrarInfo();
+        
+        
+        System.out.println("\n===== EJERCICIO 10 =====");
+        System.out.println("---- Factura Contado ----");
+        Cliente c1 = new Cliente("Daniel", "123456-7");
+        FacturaContado fc = new FacturaContado(1, c1, 500, 50);
+        fc.mostrarInfo();
+
+        System.out.println("\n=== Factura Crédito ===");
+        Cliente c2 = new Cliente("Ana", "987654-3");
+        FacturaCredito fcr = new FacturaCredito(2, c2, 500, 100, 6);
+        fcr.mostrarInfo();
             
     }
 }
