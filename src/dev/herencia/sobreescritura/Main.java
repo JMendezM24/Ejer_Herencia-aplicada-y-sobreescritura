@@ -1,7 +1,11 @@
 package dev.herencia.sobreescritura;
 
+import java.time.LocalDate;
+
 import dev.herencia.persona.*;
 import dev.herencia.cuenta.*;
+import dev.herencia.producto.*;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -11,13 +15,13 @@ public class Main {
         Docente d = new Docente("Carlos", 40, "Matemática");
         Estudiante e = new Estudiante("Ana", 22, "2024-001");
 
-        System.out.println("---- PERSONA ----");
+        System.out.println("---- Persona ----");
         p.mostrar();
 
-        System.out.println("\n---- DOCENTE ----");
+        System.out.println("\n---- Docente ----");
         d.mostrar();
 
-        System.out.println("\n---- ESTUDIANTE ----");
+        System.out.println("\n---- Estudiante ----");
         e.mostrar();
         
         System.out.println("\n===== EJERCICIO 2 =====");
@@ -36,6 +40,17 @@ public class Main {
 
         cuenta2.retirar(50); // no permitido
         cuenta2.mostrarSaldo();
+        
+        System.out.println("\n===== EJERCICIO 3 =====");
+        System.out.println("\n---- Producto ----");
+        Producto pro = new Producto("Arroz", 10.50);
+        pro.mostrarInfo();
+
+        System.out.println("\n---- Producto Perecedero ----");
+        ProductoPerecedero pp = new ProductoPerecedero("Leche",8.75, LocalDate.of(2026, 5, 1)); // cambia la fecha para probar
+
+        pp.mostrarInfo();
+
             
     }
 }
