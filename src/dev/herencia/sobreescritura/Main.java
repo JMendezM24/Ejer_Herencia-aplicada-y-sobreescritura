@@ -9,6 +9,7 @@ import dev.herencia.transporte.*;
 import dev.herencia.empleado.*;
 import dev.herencia.animal.*;
 import dev.herencia.vehiculo.*;
+import dev.herencia.figura.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -90,6 +91,19 @@ public class Main {
         Moto moto = new Moto("Suzuki", 120, 125);
         moto.mostrarInfo();
 
+        
+        System.out.println("\n===== EJERCICIO 9 =====");
+        System.out.println("---- Figura ----");
+        Figura fig = new Figura();
+        System.out.print("Area: " + fig.calcularArea()+ "\n");
+        
+        System.out.println("\n---- Moto ----");
+        Rectangulo rect = new Rectangulo(20, 10);
+        System.out.println("Area: " + rect.calcularArea());
+
+        System.out.println("\n---- Circulo ----");
+        Circulo cir = new Circulo(25);
+        System.out.println("Area: " + cir.calcularArea());
 
 
             
