@@ -6,7 +6,7 @@ import dev.herencia.persona.*;
 import dev.herencia.cuenta.*;
 import dev.herencia.producto.*;
 import dev.herencia.transporte.*;
-
+import dev.herencia.empleado.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -61,7 +61,15 @@ public class Main {
         Bus b = new Bus(40, "Zona 1 - Zona 10");
         b.descripcion();
         
-
+        
+        System.out.println("\n===== EJERCICIO 5 =====");
+        System.out.println("---- Empleado ----");
+        Empleado emp = new Empleado("Manuel", 3000);
+        emp.mostrarInfo();
+        
+        System.out.println("\n---- Gerente ----");
+        Gerente ger = new Gerente("Maria", 4000, 2500);
+        ger.mostrarInfo();
 
             
     }
