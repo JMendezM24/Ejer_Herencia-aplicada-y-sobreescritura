@@ -119,15 +119,34 @@ public class Main {
         
         
         System.out.println("\n===== EJERCICIO 10 =====");
+        /*
+          CASOS DE PRUEBA
+
+          Se crean distintos tipos de factura para comprobar:
+           1. FacturaContado → aplica descuento
+           2. FacturaCredito → aplica recargo
+           3. Validación de total (no negativo)
+
+          Se demuestra:
+           - Herencia
+           - Sobrescritura
+           - Polimorfismo (uso del mismo método con distinto resultado)
+        */
         System.out.println("---- Factura Contado ----");
         Cliente c1 = new Cliente("Daniel", "123456-7");
         FacturaContado fc = new FacturaContado(1, c1, 500, 50);
         fc.mostrarInfo();
 
-        System.out.println("\n=== Factura Crédito ===");
+        System.out.println("\n---- Factura Crédito ----");
         Cliente c2 = new Cliente("Ana", "987654-3");
         FacturaCredito fcr = new FacturaCredito(2, c2, 500, 100, 6);
         fcr.mostrarInfo();
+        
+        Cliente c3 = new Cliente("Luis", "111111-1");
+        FacturaContado fc2 = new FacturaContado(3, c3, 50, 100);
+
+        System.out.println("\n---- Validación (no negativo) ----");
+        fc2.mostrarInfo(); // total esperado: 0
             
     }
 }
