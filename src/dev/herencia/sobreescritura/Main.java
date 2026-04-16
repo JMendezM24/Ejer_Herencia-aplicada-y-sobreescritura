@@ -8,6 +8,7 @@ import dev.herencia.producto.*;
 import dev.herencia.transporte.*;
 import dev.herencia.empleado.*;
 import dev.herencia.animal.*;
+import dev.herencia.vehiculo.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,16 +27,13 @@ public class Main {
         
         
         System.out.println("\n===== EJERCICIO 2 =====");
-        // Cuenta normal
         Cuenta cuenta1 = new Cuenta(100);
         System.out.println("---- Cuenta ----");
         cuenta1.retirar(150);
         cuenta1.mostrarSaldo();
-
-        //Cuenta corriente
-        CuentaCorriente cuenta2 = new CuentaCorriente(100, 50);
+        
         System.out.println("\n---- Cuenta Corriente ----");
-
+        CuentaCorriente cuenta2 = new CuentaCorriente(100, 50);
         cuenta2.retirar(120); // Permitido
         cuenta2.mostrarSaldo();
 
@@ -81,6 +79,17 @@ public class Main {
         System.out.println("\n---- Perro ----");
         Perro perro = new Perro();
         perro.hacerSonido();
+        
+        
+        System.out.println("\n===== EJERCICIO 7 =====");
+        System.out.println("---- Vehiculo ----");
+        Vehiculo veh = new Vehiculo("Toyota", 180);
+        veh.mostrarInfo();
+        
+        System.out.println("\n---- Moto ----");
+        Moto moto = new Moto("Suzuki", 120, 125);
+        moto.mostrarInfo();
+
 
 
             
